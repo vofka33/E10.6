@@ -1,0 +1,85 @@
+@media screen and (max-width: 360px) {
+    .grid-item {  
+        border: 2px solid;
+        border-color: #91a7bd;
+        border-radius: 3px;
+        background-color: #0c263f;
+        color: white;
+        padding: 6px;
+        box-shadow: none;
+        box-shadow: 5px 5px 8px rgba(255, 255, 255, 0);
+    }
+
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(3200px, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 0;
+    
+    }
+
+    .photo{
+        width: 250px;
+        height: 199px; 
+        margin: auto;     
+    }
+    
+    .h2s{
+        font-size: 16px;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+/*селектор по тегу h2 почему то не срабатывает*/
+
+    p{
+        font-size: 12px;     
+    }
+  }
+
+
+html{
+    background-color: #0f161c;
+}
+
+header{
+    background-color: #435d76;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2vw;
+
+}
+
+.grid-item {
+    border: 2px solid;
+    border-color: #91a7bd;
+    border-radius: 3px;
+    background-color: #0c263f;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.3);
+}
+
+h2{
+    font-size: 24px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+p{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.photo{
+    display:block;
+    margin:auto;
+}
