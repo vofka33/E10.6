@@ -36,6 +36,7 @@ h2{
     display: inline-block;
     
 }
+
 p{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -45,6 +46,7 @@ p{
     display:block;
     margin:auto;
 }
+
 .period:before{
     content: '\25BA\00A0\00A0\00A0\00A0';
     font-weight: 700;
@@ -102,7 +104,6 @@ p{
         grid-gap: 2vw;
         }
 
-
     .grid-item {  
         border: 2px solid;
         border-color: #91a7bd;
@@ -131,6 +132,7 @@ p{
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 700;
     }
+    
     p{
         font-size: 12px;
     }
