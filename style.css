@@ -33,6 +33,8 @@ h2{
     font-size: 24px;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
+    display: inline-block;
+    
 }
 p{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -44,10 +46,53 @@ p{
     margin:auto;
 }
 .period:before{
-    content: '\25BA';
+    content: '\25BA\00A0\00A0\00A0\00A0';
     font-weight: 700;
 
 }
+
+  /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #435d76;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+ 
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #839bb6;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    background-color: 435d76;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: 1px solid;
+    border-color: #91a7bd;
+    border-radius: 2px;
+  }
+
+  .collapsible:after {
+    content: '\25BC'; 
+    font-size: 24px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    position: relative;
+    top: 2.5vh;
+  }
+  
+  .active:after {
+    content: "\25B2"; 
+  }
 
 @media screen and (max-width: 500px) {
     .grid-wrapper {
@@ -82,11 +127,22 @@ p{
     }
    
     h2{
-        font-size: 16px;
+        font-size: 14px;
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 700;
     }
     p{
         font-size: 12px;
     }
+
+    .collapsible:after {
+        content: '\25BC'; 
+        font-size: 8px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+        position: relative;
+        top: 3vh;
+      }
+
   }

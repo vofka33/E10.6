@@ -18,25 +18,38 @@
            <h2>Это я (шутка)</h2>
            <img class="photo" src="photo.jpg" alt="Мое фото" width="350" height="289">
          </div>
-   		 <div class="grid-item item-2"><h2>Билл Уильямович Гейтс </h2>
+   		 <div class="grid-item item-2">
+        <h2>Билл Уильямович Гейтс</h2>       
             <p>Разработчик</p>
             <p>Занятость: полная</p>
             <p>График работы: полный рабочий день</p>
             <p>Желаемая зарплата: 100 000 000 руб.</p>
             <p>Телефон: +7 (495) 000-00-01</p>
-            <p>big_bill@gates.com</p>        
-        </div>
+            <p>big_bill@gates.com</p>                
+       </div>
    		 <div class="grid-item item-3">
+        <button type="button" class="collapsible"><h2>Личная информация</h2></button>
+         <div class="content">
+            <p>Гражданство: Российская федерация</p>
+            <p>Место проживания: г. Москва</p>
+            <p>Переезд: невозможен</p>
+            <p>Образование: Высшее</p>
+            <p>Дата рождения: 18.11.1977</p>
+            <p>Семейное положение: Женат (есть дети)</p>
+          </div>
+          <noscript>
             <h2>Личная информация</h2>
             <p>Гражданство: Российская федерация</p>
             <p>Место проживания: г. Москва</p>
             <p>Переезд: невозможен</p>
             <p>Образование: Высшее</p>
             <p>Дата рождения: 18.11.1977</p>
-            <p>Пол: М</p>
             <p>Семейное положение: Женат (есть дети)</p>
+          </noscript>    
         </div>
-   		 <div class="grid-item item-4"><h2>Опыт работы</h2>
+   		 <div class="grid-item item-4">
+        <button type="button" class="collapsible"><h2>Опыт работы</h2></button>
+          <div class="content">
             <p class="period">Февраль 2019 — по настоящее время </p>
             <p>Pекламная сеть...</p>
             <p class="period">Июнь 2010 — Июнь 2018</p>
@@ -45,16 +58,58 @@
             <p>Издательский Дом...</p>
             <p class="period">Январь 1999 — Май 2001</p>
             <p>Рекламное агентство...</p>
-           </div>
-   		 <div class="grid-item item-5"><h2>Образование</h2>
+          </div>
+          <noscript>
+            <h2>Опыт работы</h2>
+            <p class="period">Февраль 2019 — по настоящее время </p>
+            <p>Pекламная сеть...</p>
+            <p class="period">Июнь 2010 — Июнь 2018</p>
+            <p>Партнерская программа...</p>
+            <p class="period">Май 2001 — Июнь 2010</p>
+            <p>Издательский Дом...</p>
+            <p class="period">Январь 1999 — Май 2001</p>
+            <p>Рекламное агентство...</p>
+          </noscript>
+        </div>
+   		 <div class="grid-item item-5">
+        <button type="button" class="collapsible"><h2>Образование</h2></button>
+         <div class="content">
             <p>Московский государственный технический университет "МАМИ", ЭМиП, Электрооборудование автомобилей и тракторов (инженер)</p>
         </div>
-         <div class="grid-item item-6"><h2>Дополнительная информация</h2>
+        <noscript>
+          <h2>Образование</h2>
+          <p>Московский государственный технический университет "МАМИ", ЭМиП, Электрооборудование автомобилей и тракторов (инженер)</p>
+        </noscript>
+       </div>
+         <div class="grid-item item-6">
+          <button type="button" class="collapsible"><h2>Дополнительная информация</h2></button>
+          <div class="content">
             <p>Иностранные языки: Английский</p>
             <p>Навыки работы с программами: Adobe Photoshop, CorelDRAW, Adobe Acrobat, Adobe InDesign, Яндекс.Метрика, Google Analytics</p>
-        
+          </div>
+          <noscript>
+            <h2>Дополнительная информация</h2>
+            <p>Иностранные языки: Английский</p>
+            <p>Навыки работы с программами: Adobe Photoshop, CorelDRAW, Adobe Acrobat, Adobe InDesign, Яндекс.Метрика, Google Analytics</p>
+          </noscript>
          </div>
    	 </div>
     </main>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+      </script>
   </body>
 </html>
